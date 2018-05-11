@@ -1,14 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Objetos;
 
-/**
- *
- * @author Usuario
- */
-public class Arma {
+public class Arma extends ObjetosGeneral{
+    
+    private int ArmaBlanca;
+    private int ArmaNegro;
+    private int espada;
+    private int martillo;
+
+    public Arma(int ArmaBlanca, int ArmaNegro, int espada, int martillo, String nombre, String tipo) {
+        super(nombre, tipo);
+        this.ArmaBlanca = 10;
+        this.ArmaNegro = 15;
+        this.espada = 10;
+        this.martillo = 5;
+    }
+    
+    
     
 }

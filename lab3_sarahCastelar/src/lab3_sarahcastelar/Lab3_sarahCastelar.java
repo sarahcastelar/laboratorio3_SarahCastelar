@@ -16,6 +16,7 @@ public class Lab3_sarahCastelar {
         
         //crear personaje
         ArrayList lista = new ArrayList();
+        ArrayList enemigo = new ArrayList();
         
         //nivel dificultad
         int cantEnemigos = 5, pasosInicio = 0, pasosTotal = 50; //por default empieza en facil.
@@ -72,6 +73,31 @@ public class Lab3_sarahCastelar {
                 
                 
                 
+                
+                //inicio juego
+                int numEnemigo = r.nextInt(5);
+                
+                switch (numEnemigo){
+                    
+                    case 1:
+                        enemigo.add(new Bruja(0,0,0,0,0,1,"muajaja",edad,nombre,estatura,peso, raza));
+                    break;
+                    
+                    case 2:
+                        enemigo.add(new Troll(0, 0, 0, 0, 0, "1", 0, "1", 0, 0, "1"));
+                    break;
+                    
+                    case 3:
+                        enemigo.add(new  Orco(0,0,0,0,0,"0",0,"0",0,0,"0"));
+                   break;
+                   
+                    default:     
+                        enemigo.add(new ElfoOscuro(0,0,0,0,0, "0", 0, "0", 0,0,"0"));
+                    break;    
+                
+                }
+                
+                
                 while (pasosInicio <= pasosTotal){
                     
                     dado = r.nextInt(20);
@@ -79,7 +105,7 @@ public class Lab3_sarahCastelar {
                     
                     if (dado < suerte) {
                         //encuentra objeto
-                        int R = r.nextInt(4);
+                        int R = 1 + r.nextInt(4);
                         if (R == 1)
                             mochila.add(new ObjetosGeneral("Arma Blanca","Usual") );
                         if (R == 2)
@@ -88,8 +114,6 @@ public class Lab3_sarahCastelar {
                             mochila.add(new ObjetosGeneral("Espada","Usual"));
                         if (R == 4)
                             mochila.add(new ObjetosGeneral("Martillo","Usual"));
-                        if (R == 5)
-                            mochila.add(new ObjetosGeneral("Arma Negra","Usual"));
                         
                         
                     }else {
