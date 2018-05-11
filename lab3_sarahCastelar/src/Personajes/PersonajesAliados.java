@@ -9,7 +9,7 @@ public class PersonajesAliados extends PersonajesGeneral{
     private String colorPelo;
 
     public PersonajesAliados(int suerte, String colorPiel, String colorPelo, int hp, int ad, int eficacia, int probCritico, int velocidad, String gritoBatalla, int edad, String nombre, int estatura, int peso, String raza) {
-        super(hp, ad, eficacia, probCritico, velocidad, gritoBatalla, edad, nombre, estatura, peso);
+        super(hp, ad, eficacia, probCritico, velocidad, gritoBatalla, edad, nombre, estatura, peso, raza);
         this.suerte = suerte;
         this.colorPiel = colorPiel;
         this.colorPelo = colorPelo;
@@ -37,6 +37,11 @@ public class PersonajesAliados extends PersonajesGeneral{
 
     public void setColorPelo(String colorPelo) {
         this.colorPelo = colorPelo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
     

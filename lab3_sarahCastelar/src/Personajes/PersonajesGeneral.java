@@ -4,21 +4,22 @@ package Personajes;
 public class PersonajesGeneral {
 
     
-    private int hp;
-    private int ad;
-    private int eficacia;
-    private int probCritico;
-    private int velocidad; 
-    private String gritoBatalla;
-    private int edad;
-    private String nombre;
-    private int estatura;
-    private int peso;
+    protected int hp;
+    protected int ad;
+    protected int eficacia;
+    protected int probCritico;
+    protected int velocidad; 
+    protected String gritoBatalla;
+    protected int edad;
+    protected String nombre;
+    protected int estatura;
+    protected int peso;
+    protected String raza;
 
     public PersonajesGeneral() {
     }
 
-    public PersonajesGeneral(int hp, int ad, int eficacia, int probCritico, int velocidad, String gritoBatalla, int edad, String nombre, int estatura, int peso) {
+    public PersonajesGeneral(int hp, int ad, int eficacia, int probCritico, int velocidad, String gritoBatalla, int edad, String nombre, int estatura, int peso, String raza) {
         this.hp = hp;
         this.ad = ad;
         this.eficacia = eficacia;
@@ -29,6 +30,7 @@ public class PersonajesGeneral {
         this.nombre = nombre;
         this.estatura = estatura;
         this.peso = peso;
+        this.raza = raza;
     }
 
     public int getHp() {
@@ -52,7 +54,8 @@ public class PersonajesGeneral {
     }
 
     public void setEficacia(int eficacia) {
-        this.eficacia = eficacia;
+        if (eficacia < 100 && eficacia > 1)
+            this.eficacia = eficacia;
     }
 
     public int getProbCritico() {
@@ -110,6 +113,13 @@ public class PersonajesGeneral {
     public void setPeso(int peso) {
         this.peso = peso;
     }
+
+    @Override
+    public String toString() {
+        return   "HP:" + hp + "\n AD: " + ad + "\n Eficacia: " + eficacia + "\n Probabilidad Critico: " + probCritico + "\n Velocidad: " + velocidad +  "\n Grito Batalla:" + gritoBatalla + "\n Edad: " + edad + "\n Nombre: " + nombre + "\n Estatura: " + estatura + "\n Peso: " + peso + "\n Raza: " + raza + '}';
+    }
+    
+    
     
     
     
