@@ -16,7 +16,13 @@ public class Lab3_sarahCastelar {
                     + "3. Salir"));
             
             
-            
+            if (option == 1) {
+                int option2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese opcion de personaje: "
+                        + "1. Mago"
+                        + "2. Berzerk"
+                        + "3. Arquero"
+                        + "4. Picaro"));
+            }
             
         }
         
