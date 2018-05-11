@@ -95,6 +95,9 @@ public class Lab3_sarahCastelar {
                         enemigo.add(new ElfoOscuro(0,0,0,0,0, "0", 0, "0", 0,0,"0"));
                     break;    
                 
+                        if (true) {
+                            
+                        }
                 }
                 
                 
