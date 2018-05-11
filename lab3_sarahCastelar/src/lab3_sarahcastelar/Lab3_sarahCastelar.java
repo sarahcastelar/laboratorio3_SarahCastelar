@@ -4,6 +4,8 @@ package lab3_sarahcastelar;
 import javax.swing.JOptionPane;
 import Personajes.*;
 import java.util.ArrayList;
+import java.util.Random;
+import Objetos.*;
 
 public class Lab3_sarahCastelar {
 
@@ -16,8 +18,10 @@ public class Lab3_sarahCastelar {
         ArrayList lista = new ArrayList();
         
         //nivel dificultad
-        int cantEnemigos = 5, pasosTotal = 50; //por default empieza en facil. 
-    
+        int cantEnemigos = 5, pasosInicio = 0, pasosTotal = 50; //por default empieza en facil.
+        int dado;
+        Random r = new Random();
+        ArrayList mochila = new ArrayList();
     
     
         
@@ -64,7 +68,45 @@ public class Lab3_sarahCastelar {
                     lista.add( new Mago(20, "verde", "blanco", 120, 20, 70, 2, 10, "shwshhh", 20, "Mago F", 50, 50,"humano"));
                 }
                 
-                System.out.println(lista);
+                //AVANCE JUEGOOOOOO
+                
+                
+                
+                while (pasosInicio <= pasosTotal){
+                    
+                    dado = r.nextInt(20);
+                    int suerte = ((PersonajesAliados) lista.get(0)).getSuerte();
+                    
+                    if (dado < suerte) {
+                        //encuentra objeto
+                        int R = r.nextInt(4);
+                        if (R == 1)
+                            mochila.add(new ObjetosGeneral("Arma Blanca","Usual") );
+                        if (R == 2)
+                            mochila.add(new ObjetosGeneral("Arma Negra","Usual"));
+                        if (R == 3)
+                            mochila.add(new ObjetosGeneral("Espada","Usual"));
+                        if (R == 4)
+                            mochila.add(new ObjetosGeneral("Martillo","Usual"));
+                        if (R == 5)
+                            mochila.add(new ObjetosGeneral("Arma Negra","Usual"));
+                        
+                        
+                    }else {
+                        if (cantEnemigos > 0) {
+                            //encuentra enemigos
+                        }
+                    }
+                    
+                    
+                    
+                }
+                
+                
+                
+                
+                
+                
             }
             
             if (option == 2) {
