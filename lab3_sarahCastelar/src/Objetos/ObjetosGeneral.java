@@ -29,6 +29,7 @@ public class ObjetosGeneral {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+   
     
     
    
